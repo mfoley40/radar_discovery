@@ -19,6 +19,7 @@ mix test
 
 ## Usage
 radar discover    Discover radars on NavNet
+
 radar help        Display help message
 
 
