@@ -18,8 +18,8 @@ mix test
 
 
 ## Usage
-radar discover    # Discover radars on NavNet
-radar help        # Display help message
+radar discover    Discover radars on NavNet
+radar help        Display help message
 
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
