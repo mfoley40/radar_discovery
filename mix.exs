@@ -4,7 +4,8 @@ defmodule RadarDiscovery.MixProject do
   def project do
     [
       app: :radar_discovery,
-      version: "0.1.0",
+      escript: [main_module: RadarDiscovery, name: "radar", path: "/usr/local/bin/radar"],
+      version: version(),
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       deps: deps()
@@ -24,5 +25,12 @@ defmodule RadarDiscovery.MixProject do
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
+  end
+
+  defp version do
+    case File.read("VERSION") do
+      {:ok, ver} -> String.trim ver
+      _ -> "0.0.0-dev" # Default if file VERSION isn't found.
+    end
   end
 end
