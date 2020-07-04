@@ -1,6 +1,6 @@
 # RadarDiscovery
 
-Simple command line tool to send inquiry messages on the NavNet discovery channel of 172.31.255.255:2011.
+Simple command line tool to send inquiry messages on the NavNet discovery channel of 172.31.255.255:10010.
 
 ## Building 
 
