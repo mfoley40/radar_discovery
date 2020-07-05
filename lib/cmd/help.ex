@@ -9,7 +9,7 @@ defmodule Cmd.Help do
 
   radar discover                find radars using NavNet discovery
   radar help                    shows this help message
-
+  radar watch                   print any NavNet messages received
   """
 
   @doc """

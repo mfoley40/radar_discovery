@@ -19,7 +19,7 @@ defmodule RadarDiscovery do
   defp parse_args(args) do
     options =
       OptionParser.parse(args,
-        strict: [help: :boolean, discover: :boolean],
+        strict: [discover: :boolean, watch: :boolean, help: :boolean],
         aliases: aliases()
       )
 
@@ -30,10 +30,19 @@ defmodule RadarDiscovery do
       # Discover
       #
       {[discover: true], _, _} ->
-        Cmd.Discover.run(nil)
+        Cmd.Discover.run()
 
       {[], ["discover"], []} ->
-        Cmd.Discover.run(nil)
+        Cmd.Discover.run()
+
+      #
+      # Watch
+      #
+      {[watch: true], _, _} ->
+        Cmd.Watch.run()
+
+      {[], ["watch"], []} ->
+        Cmd.Watch.run()
 
       #
       # Help
@@ -58,7 +67,8 @@ defmodule RadarDiscovery do
   #
   defp aliases,
     do: [
-      h: :help,
-      d: :discover
+      d: :discover,
+      w: :watch,
+      h: :help
     ]
 end
