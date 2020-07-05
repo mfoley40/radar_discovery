@@ -8,7 +8,7 @@ defmodule Cmd.Discover do
   @disco_port 10010
 
   @doc "Takes paramater(s) from Cmd.main to perform action"
-  def run(_spec, _opts \\ %{}) do
+  def run() do
     Logger.info("#{__MODULE__} run")
 
     # May want to look at spawnin receiver thread
